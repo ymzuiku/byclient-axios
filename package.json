@@ -1,0 +1,28 @@
+{
+  "name": "lightning-axios",
+  "version": "0.1.2",
+  "main": "umd/index.js",
+  "types": "umd/index.d.ts",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "lib": "node rollup.js",
+    "start": "node rollup.js -w & nodemon example/index.js"
+  },
+  "repository": "ymzuiku/lightning-axios",
+  "author": "pillar <ymblender@gmail.com>",
+  "dependencies": {
+    "@types/node-rsa": "^1.0.0",
+    "axios": "^0.19.0",
+    "node-rsa": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.2",
+    "rollup": "^1.27.12",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "rollup-plugin-uglify": "^6.0.4",
+    "typescript": "^3.7.3"
+  }
+}
