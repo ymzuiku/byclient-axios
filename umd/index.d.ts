@@ -3,6 +3,7 @@ import { createRSA } from './createRSA';
 export interface IParams {
     url: string;
     keys?: string;
+    checkKey?: string;
     config?: AxiosRequestConfig;
 }
 export { createRSA };

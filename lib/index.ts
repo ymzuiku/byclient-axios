@@ -4,13 +4,14 @@ import { createRSA } from './createRSA';
 export interface IParams {
   url: string;
   keys?: string;
+  checkKey?:string;
   config?: AxiosRequestConfig;
 }
 
 export { createRSA };
 
 export const Lightning = (params: IParams) => {
-  const { url, keys, config = {} } = params;
+  const { url, keys, config = {}, checkKey } = params;
   const RSA = createRSA();
   if (keys) {
     RSA.init(keys);
@@ -20,7 +21,7 @@ export const Lightning = (params: IParams) => {
     return new Promise(cb => {
       Axios.post(
         url,
-        { code: RSA.encode(data) },
+        { code: RSA.encode({...data,_checkTime: Date.now(), _checkKey: checkKey})},
         {
           ...config,
           headers: { 'content-type': 'application/json', ...config.headers },

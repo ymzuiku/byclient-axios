@@ -1,7 +1,8 @@
 import { Lightning } from 'lightning-axios';
 
 const lightning = Lightning({
-  url: 'http://0.0.0.0:4010/lightning',
+  url: 'http://0.0.0.0:4010/less',
+  checkKey: 'dogcat',
   keys: `
 -----BEGIN PUBLIC KEY-----
 MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAI6ZEQnI7LICgjpmYtwpRhBa5vIVPHTS
