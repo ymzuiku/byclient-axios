@@ -1,9 +1,10 @@
 import { Lightning } from 'lightning-axios';
 
 const lightning = Lightning({
-  url: 'http://0.0.0.0:4010/less',
-  checkKey: 'dogcat',
-  keys: `
+  // url: 'http://workos.top:4010/less',
+  checkKey: '123',
+  url: 'http://127.0.0.1:4010/less',
+  RSAKey: `
 -----BEGIN PUBLIC KEY-----
 MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAI6ZEQnI7LICgjpmYtwpRhBa5vIVPHTS
 6VVHE/WVoK6cduwwJyNX7PYgFHT9CrKJVdd99XmqN2TbNRaFkTetaA0CAwEAAQ==

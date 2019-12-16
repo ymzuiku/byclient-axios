@@ -109,7 +109,7 @@
     };
 
     var Lightning = function (params) {
-        var url = params.url, keys = params.keys, _a = params.config, config = _a === void 0 ? {} : _a, checkKey = params.checkKey;
+        var url = params.url, keys = params.RSAKey, _a = params.config, config = _a === void 0 ? {} : _a, checkKey = params.checkKey;
         var RSA = createRSA();
         if (keys) {
             RSA.init(keys);

@@ -1,6 +1,6 @@
 {
   "name": "lightning-axios",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "main": "umd/index.js",
   "types": "umd/index.d.ts",
   "private": false,

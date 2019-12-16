@@ -2,7 +2,7 @@ import { AxiosRequestConfig } from 'axios';
 import { createRSA } from './createRSA';
 export interface IParams {
     url: string;
-    keys?: string;
+    RSAKey?: string;
     checkKey?: string;
     config?: AxiosRequestConfig;
 }
