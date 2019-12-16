@@ -81,6 +81,8 @@
                 RSA.priateKey = new NodeRSA({ b: 512 });
                 RSA.publicKey.importKey(a, 'public');
                 RSA.priateKey.importKey(b, 'private');
+                RSA.publicKey.setOptions({ encryptionScheme: 'pkcs1' });
+                RSA.priateKey.setOptions({ encryptionScheme: 'pkcs1' });
             },
             createKeys: function () {
                 var key = new NodeRSA({ b: 512 });
