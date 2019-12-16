@@ -1,8 +1,7 @@
 import { Lightning } from 'lightning-axios';
 
 const lightning = Lightning({
-  // url: 'http://workos.top:4010/less',
-  checkKey: '123',
+  checkKey: '123456',
   url: 'http://127.0.0.1:4010/less',
   RSAKey: `
 -----BEGIN PUBLIC KEY-----
