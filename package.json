@@ -1,6 +1,6 @@
 {
-  "name": "lightning-axios",
-  "version": "0.2.5",
+  "name": "byclient-axios",
+  "version": "0.1.1",
   "main": "umd/index.js",
   "types": "umd/index.d.ts",
   "private": false,
@@ -9,7 +9,7 @@
     "lib": "node rollup.js",
     "start": "node rollup.js -w & nodemon example/index.js"
   },
-  "repository": "ymzuiku/lightning-axios",
+  "repository": "ymzuiku/byclient-axios",
   "author": "pillar <ymblender@gmail.com>",
   "dependencies": {
     "@types/node-rsa": "^1.0.0",

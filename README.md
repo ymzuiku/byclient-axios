@@ -1,13 +1,13 @@
-# lightning-fetch
+# byclient-axios
 
-lightning-base 的浏览器请求端
+byclient 的浏览器请求端
 设置了 serverless 之后，大部分 mongodb 数据库的操作都迁移到了前端， client 请求：
 
 ```js
-import { Lightning } from 'lightning-axios';
+import { ByClientAxios } from 'byclient-axios';
 
-const lightning = Lightning({
-  url: 'http://0.0.0.0:4010/lightning',
+const client = ByClientAxios({
+  url: 'http://0.0.0.0:4010/less',
   // 若后端设置了 checkKey, 前端就必须传递预定密钥
   checkKey: '123456',
   // 若后端设置了 RSAKey, 前端必须设置交互后的密钥
@@ -30,7 +30,7 @@ xRNJjNFCbTEyKb65ydGFYtcwzcX+AUcLlOb/n7G+
 });
 
 // 发起此请求，服务端执行 db.collection[method](...args):
-lighting({
+client({
   db: 'test',
   col: 'anima',
   method: 'insertOne',
@@ -54,7 +54,7 @@ lighting({
 // ]);
 
 // 我们还可以描述哪些字段存表之前，在后端使用sha256加密，或将字段转为ObjectId:
-lighting({
+client({
   db: 'test',
   col: 'user',
   method: 'insertOne',
@@ -66,7 +66,7 @@ lighting({
 });
 
 // 我们看到，创建之后，整个对象也返回了，我们为了节流，可以屏蔽ops:
-lighting({
+client({
   db: 'test',
   col: 'user',
   method: 'insertOne',
@@ -80,7 +80,7 @@ lighting({
 });
 
 // 更新操作:
-lighting({
+client({
   db: 'test',
   col: 'user',
   method: 'updateOne',
@@ -92,7 +92,7 @@ lighting({
 });
 
 // 删除操作:
-lighting({
+client({
   db: 'test',
   col: 'user',
   method: 'deleteOne',

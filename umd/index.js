@@ -110,13 +110,13 @@
         return RSA;
     };
 
-    var Lightning = function (params) {
+    var ByClientAxios = function (params) {
         var url = params.url, keys = params.RSAKey, _a = params.config, config = _a === void 0 ? {} : _a, checkKey = params.checkKey;
         var RSA = createRSA();
         if (keys) {
             RSA.init(keys);
         }
-        var lightning = function (data) { return __awaiter(void 0, void 0, void 0, function () {
+        var client = function (data) { return __awaiter(void 0, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, new Promise(function (cb) {
                         Axios.post(url, { code: RSA.encode(__assign(__assign({}, data), { _checkTime: Date.now(), _checkKey: checkKey })) }, __assign(__assign({}, config), { headers: __assign({ 'content-type': 'application/json' }, config.headers) }))
@@ -133,10 +133,10 @@
                     })];
             });
         }); };
-        return lightning;
+        return client;
     };
 
-    exports.Lightning = Lightning;
+    exports.ByClientAxios = ByClientAxios;
     exports.createRSA = createRSA;
 
     Object.defineProperty(exports, '__esModule', { value: true });

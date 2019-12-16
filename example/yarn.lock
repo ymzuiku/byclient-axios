@@ -2355,6 +2355,15 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
+byclient-axios@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/byclient-axios/-/byclient-axios-0.1.1.tgz#b0a660fd15b29d44ea07489fc867303e35d58522"
+  integrity sha512-AwQ2Z/b27C3oIaZe0jA4SheGCxU826PuADE7ENf+gZMfCP3nTPFjpR7JEXyseVDUoNYW71JFruTCgmNipy0S5A==
+  dependencies:
+    "@types/node-rsa" "^1.0.0"
+    axios "^0.19.0"
+    node-rsa "^1.0.7"
+
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"

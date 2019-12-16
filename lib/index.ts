@@ -10,14 +10,14 @@ export interface IParams {
 
 export { createRSA };
 
-export const Lightning = (params: IParams) => {
+export const ByClientAxios = (params: IParams) => {
   const { url, RSAKey: keys, config = {}, checkKey } = params;
   const RSA = createRSA();
   if (keys) {
     RSA.init(keys);
   }
 
-  const lightning = async (data: any) => {
+  const client = async (data: any) => {
     return new Promise(cb => {
       Axios.post(
         url,
@@ -40,5 +40,5 @@ export const Lightning = (params: IParams) => {
     });
   };
 
-  return lightning;
+  return client;
 };

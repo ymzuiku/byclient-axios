@@ -7,4 +7,4 @@ export interface IParams {
     config?: AxiosRequestConfig;
 }
 export { createRSA };
-export declare const Lightning: (params: IParams) => (data: any) => Promise<unknown>;
+export declare const ByClientAxios: (params: IParams) => (data: any) => Promise<unknown>;
