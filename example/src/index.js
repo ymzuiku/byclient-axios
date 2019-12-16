@@ -1,8 +1,8 @@
 import { Lightning } from 'lightning-axios';
 
 const lightning = Lightning({
-  checkKey: '123456',
   url: 'http://127.0.0.1:4010/less',
+  checkKey: '123456',
   RSAKey: `
 -----BEGIN PUBLIC KEY-----
 MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAI6ZEQnI7LICgjpmYtwpRhBa5vIVPHTS
