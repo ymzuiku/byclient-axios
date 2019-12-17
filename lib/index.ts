@@ -5,14 +5,16 @@ export interface IParams {
   url: string;
   RSAKey?: string;
   checkKey?: string;
+  bit?: number;
   config?: AxiosRequestConfig;
+  encryptionScheme?: 'pkcs1' | 'pkcs1_oaep';
 }
 
 export const ByClientAxios = (params: IParams) => {
-  const { url, RSAKey: keys, config = {}, checkKey } = params;
+  const { bit = 1024, encryptionScheme = 'pkcs1', url, RSAKey: keys, config = {}, checkKey } = params;
 
-  const rsa = new NodeRSA({ b: 1024 });
-  rsa.setOptions({ encryptionScheme: 'pkcs1' });
+  const rsa = new NodeRSA({ b: bit });
+  rsa.setOptions({ encryptionScheme });
   if (keys) {
     rsa.importKey(keys, 'private');
   }
