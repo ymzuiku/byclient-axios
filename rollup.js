@@ -49,9 +49,9 @@ const watchOptions = {
       tsconfig: './tsconfig.json',
       useTsconfigDeclarationDir: false,
     }),
-    // uglify({
-    //   sourcemap: true,
-    // }),
+    uglify({
+      sourcemap: true,
+    }),
   ],
 };
 const watcher = rollup.watch(watchOptions);
