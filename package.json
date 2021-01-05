@@ -13,7 +13,7 @@
   "author": "pillar <ymblender@gmail.com>",
   "dependencies": {
     "@types/node-rsa": "^1.0.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "node-rsa": "^1.0.7"
   },
   "devDependencies": {
